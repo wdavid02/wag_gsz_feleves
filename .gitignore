@@ -49,3 +49,30 @@ qtcreator-*
 
 # Catkin custom files
 CATKIN_IGNORE
+install/_local_setup_util_ps1.py
+install/_local_setup_util_sh.py
+install/.colcon_install_layout
+install/COLCON_IGNORE
+install/local_setup.bash
+install/local_setup.ps1
+install/local_setup.sh
+install/local_setup.zsh
+install/setup.bash
+install/setup.ps1
+install/setup.sh
+install/setup.zsh
+install/wag_gsz_feleves/share/wag_gsz_feleves/hook/ament_prefix_path.dsv
+install/wag_gsz_feleves/share/wag_gsz_feleves/hook/ament_prefix_path.ps1
+install/wag_gsz_feleves/share/wag_gsz_feleves/hook/ament_prefix_path.sh
+log/COLCON_IGNORE
+log/latest
+log/latest_build
+log/build_2024-12-17_13-04-12/events.log
+log/build_2024-12-17_13-04-12/logger_all.log
+log/build_2024-12-17_13-04-12/wag_gsz_feleves/command.log
+log/build_2024-12-17_13-04-12/wag_gsz_feleves/stderr.log
+log/build_2024-12-17_13-04-12/wag_gsz_feleves/stdout_stderr.log
+log/build_2024-12-17_13-04-12/wag_gsz_feleves/stdout.log
+log/build_2024-12-17_13-04-12/wag_gsz_feleves/streams.log
+log/build_2024-12-17_13-10-53/events.log
+log/build_2024-12-17_13-10-53/logger_all.log
