@@ -24,11 +24,13 @@ def generate_launch_description():
 
     gazebo_params_file = os.path.join(get_package_share_directory(package_name),'config','gazebo_params.yaml')
 
+    world_file_path = os.path.join(get_package_share_directory(package_name), 'worlds', 'custom_world.world')
+
     # Include the Gazebo launch file, provided by the gazebo_ros package
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
-                    launch_arguments={'extra_gazebo_args': '--ros-args --params-file ' + gazebo_params_file}.items()
+                            launch_arguments={'world': world_file_path,'extra_gazebo_args': '--ros-args --params-file ' + gazebo_params_file}.items()
     )
 
     # Run the spawner node from the gazebo_ros package. The entity name doesn't really matter if you only have a single robot.
@@ -57,6 +59,16 @@ def generate_launch_description():
         launch_arguments={'use_sim_time': 'true'}.items()
     )
 
+    # Launch RViz2
+    rviz_config_file = os.path.join(get_package_share_directory(package_name), 'config', 'rviz2_config.rviz')
+
+    rviz2 = Node(
+        package='rviz2',
+        executable='rviz2',
+        arguments=['-d', rviz_config_file],
+        output='screen'
+    )
+
     # Launch them all!
     return LaunchDescription([
         rsp,
@@ -64,5 +76,6 @@ def generate_launch_description():
         spawn_entity,
         diff_drive_spawner,
         joint_broad_spawner,
-        slam_toolbox_launch
+        slam_toolbox_launch,
+        rviz2
     ])
