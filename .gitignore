@@ -132,3 +132,4 @@ install/wag_gsz_feleves/share/wag_gsz_feleves/description/robot.urdf.xacro
 install/wag_gsz_feleves/share/wag_gsz_feleves/description/lidar.xacro
 install/wag_gsz_feleves/share/wag_gsz_feleves/launch/launch_sim.launch.py
 install/wag_gsz_feleves/share/wag_gsz_feleves/worlds/empty.world
+install/wag_gsz_feleves/share/wag_gsz_feleves/description/robot.urdf.xacro
